@@ -44,40 +44,45 @@ int menu(void){
   printf("\n********           5 - Encerrar            **********");
   printf("\n*****************************************************");
 
-  fflush(stdin);
+   
+  do{
+ 
   printf("\n\nEscolha uma das opções do MENU PRINCIPAL:  ");
+  fflush(stdin);
   scanf("%d", &opcao);
 
-  switch(opcao){
 
-    case 1:
-      printf("\nCarro adicionado a fila");
-    break;
-    
-    case 2:
-      printf("\nCarro abstecido");
-    break;
-    
-    case 3:
-      printf("\nProximo carro da fila");
-    break;
-    
-    case 4:
-      relatorio();    
-    break;
-    
-    case 5:
-      printf("\nEncerrando programa !!!");
-    break;
-    
-    default:
-    //system("clear");
-    printf("\nOpção invalida, tente novamente\n\n");
-    menu();  
-  }
+    switch(opcao){
   
+      case 1:
+        printf("\nCarro adicionado a fila");
+      break;
+      
+      case 2:
+        printf("\nCarro abstecido");
+      break;
+      
+      case 3:
+        printf("\nProximo carro da fila");
+      break;
+      
+      case 4:
+        relatorio();    
+      break;
+      
+      case 5:
+        printf("\nEncerrando programa !!!");
+      break;
+      
+      default:
+      printf("\nOpção invalida, tente novamente\n\n");
+      
+    
+    }
+  }while(opcao < 1 || opcao > 5);
   
-  
+  return 0;
+ 
 }
 int relatorio(void){
 
@@ -92,7 +97,7 @@ int relatorio(void){
   printf("\nC - Quantidade de carros atendidos");
   printf("\nD - Quantidade de combustivel restante em cada tanque");
 
-  
+    return 0;
 }
 
 int autor(void){
@@ -105,8 +110,10 @@ int autor(void){
   printf("Este é um sistema de controle do posto de combustivel\nQue possuira controle de preços, litros disponiveis e\nfila de carros\n");
   
  printf("\n*****************************************************\n");
-  sleep(10);
+  sleep(2);
   system("clear");
+
+  return 0;
   
 }
 
